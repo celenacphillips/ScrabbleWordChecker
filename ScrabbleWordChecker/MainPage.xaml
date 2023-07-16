@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ScrabbleWordChecker.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Label
+                Text="Scrabble Word Checker"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="30"
+                HorizontalOptions="Center" />
+
+            <Label
+                x:Name="dictionary"
+                Text=""
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="12"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Enter a word"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="20"
+                HorizontalOptions="Center" />
+
+
+            <Entry x:Name="wordEntry"
+                   Placeholder="Enter a word"/>
+
+            <Button
+                x:Name="SendBtn"
+                Text="Check!"
+                SemanticProperties.Hint="Sends the word to the Dictionary API"
+                Clicked="OnButtonClicked"
+                HorizontalOptions="Center" />
+
+            <Label
+                x:Name="enteredWord"
+                Text=""
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Entered Word"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Label
+                x:Name="definition"
+                Text=""
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Definition"
+                FontSize="14"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
